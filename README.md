@@ -1,2 +1,2 @@
-travel-companion
+My Notes
 ================
