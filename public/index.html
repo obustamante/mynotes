@@ -15,10 +15,26 @@
     <script src="js/scripts/bootstrap-modal.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/scripts/handlebars-1.0.rc.4.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/scripts/ember-1.0.0-rc.4.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts/ember-data-beta-1.js" type="text/javascript" charset="utf-8"></script>
+
     <script src="js/app/app.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body bgcolor="#ffffff">
+
+<script type="text/x-handlebars" id="notes">
+        <div id="notes" class="azuraBlueBackground azureBlueBorderThin">
+            {{ input valueBinding="newNoteName" }}
+            <button class="btn btn-default btn-xs" {{ action "createNewNote" }}>New Note</button>
+            <div class="list-group" style="margin-top: 10px;">
+            { {#each controller} }
+                <div class="list-group-item">
+                    {{ name }}
+                </div>
+            { {/each} } 
+            </div>
+        </div>
+    </script>
 
 </body>
 </html>
